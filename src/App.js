@@ -35,6 +35,7 @@ const App = () => {
    setFirstName('')
    setLastName('')
    setDomain('')
+   window.location.reload();
 };
 
 useEffect(()=>{
