@@ -31,7 +31,7 @@ const App = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-   dispatch(addEmail(domain.startsWith('@babbel') ? firstName.split('').slice(0, 1).join() : firstName.toLowerCase(), lastName.toLowerCase(), domain.toLowerCase()))
+   dispatch(addEmail(domain.startsWith('@babbel') ? firstName.split('').slice(0, 1).join().toLowerCase() : firstName.toLowerCase(), lastName.toLowerCase(), domain.toLowerCase()))
    setFirstName('')
    setLastName('')
    setDomain('')
@@ -76,7 +76,7 @@ useEffect(()=>{
 
                <Form.Group controlId="domain">
                 <Form.Label>
-                    Domain address
+                    Domain address (example @babbel.com)
                 </Form.Label>
                 <Form.Control type="text" placeholder="Enter domain address" value={domain} onChange={e => setDomain( e.target.value)}>
 
